@@ -2,7 +2,7 @@
 # Código de Conducta
 Se espera que todos los participantes de **unbreakable.studio** cumplan con nuestro Código de conducta, tanto en línea como durante los eventos en persona que se hospedan y / o están asociados con **unbreakable.studio**.
 
-# La prenda
+# El código 
 Con el fin de fomentar un ambiente abierto y acogedor, nos comprometemos a hacer que la participación en nuestro proyecto y nuestra comunidad sea una experiencia sin hostigamiento para todos, independientemente de la edad, el tamaño del cuerpo, la discapacidad, el origen étnico, la identidad y expresión de género, el nivel de experiencia, nacionalidad, apariencia personal, raza, religión o identidad y orientación sexual.
 
 # Los estandares
