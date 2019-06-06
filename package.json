@@ -1,6 +1,6 @@
 {
   "name": "coco-gen",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Generador de códigos de conducta",
   "main": "./lib/index.js",
   "bin": {
