@@ -11,6 +11,13 @@
   },
   "keywords": [],
   "author": "https://github.com/luispagarcia/",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LuisPaGarcia/coco-gen.git"
+  },
+  "bugs": {
+    "url": "https://github.com/LuisPaGarcia/coco-gen/issues"
+  },
   "license": "MIT",
   "scripts": {
     "test": "echo \"Error: no test specified\""
