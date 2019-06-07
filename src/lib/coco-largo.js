@@ -1,19 +1,16 @@
 //@ts-check
-const utils = require('./utils');
+import { organizacion, email } from './utils';
+
 const coco_largo = `
 # Código de Conducta y Ética
 
 # Introducción
 
-Las acciones de los profesionales de la Informática cambian el mundo. Para actuar de forma responsable, deben reflexionar sobre los impactos amplios de su trabajo, siempre en pos del bien público. El Código de Ética y Conducta Profesional de **${
-	utils.utils.organizacion
-}** da cuenta de la conciencia de la profesión.
+Las acciones de los profesionales de la Informática cambian el mundo. Para actuar de forma responsable, deben reflexionar sobre los impactos amplios de su trabajo, siempre en pos del bien público. El Código de Ética y Conducta Profesional de **${organizacion}** da cuenta de la conciencia de la profesión.
 
 El Código está diseñado para inspirar y guiar la conducta ética de todos los profesionales de la Informática, incluyendo a los profesionales actuales y futuros, a los instructores, los estudiantes, las personas influyentes y a cualquiera que utilice la tecnología informática para generar un impacto. Además, el Código sirve como una base para corregir posibles infracciones. El Código incluye principios formulados como declaraciones de responsabilidad, basados en la idea de que el bien público siempre es la primera prioridad. Cada principio esta complementado con guías que proporcionan explicaciones para ayudar a los profesionales de la Informática a comprenderlo y aplicarlo.
 
-La Sección 1 describe los principios éticos fundamentales que forman la base del Código. La Sección 2 aborda consideraciones adicionales más específicas sobre la responsabilidad profesional. La Sección 3 guía a las personas que tienen un rol de liderazgo, ya sea en el lugar de trabajo o como voluntarios. Cada miembro de **${
-	utils.utils.organizacion
-}** debe comprometerse a respetar la conducta ética; y los principios implicados en el cumplimiento de este Código se presentan en la Sección 4.
+La Sección 1 describe los principios éticos fundamentales que forman la base del Código. La Sección 2 aborda consideraciones adicionales más específicas sobre la responsabilidad profesional. La Sección 3 guía a las personas que tienen un rol de liderazgo, ya sea en el lugar de trabajo o como voluntarios. Cada miembro de **${organizacion}** debe comprometerse a respetar la conducta ética; y los principios implicados en el cumplimiento de este Código se presentan en la Sección 4.
 
 El Código, en general, aborda el modo en el que los principios éticos fundamentales se aplican a las conductas de un profesional de la Informática. El Código no es un algoritmo para resolver problemas éticos; sino que sirve como un punto de partida para la toma de decisiones éticas. Al abordar un problema particular, un profesional de la informática puede enfrentarse a múltiples principios que deben ser tenidos en cuenta, y aquellos principios pueden mostrar diferentes grados de relevancia para el problema abordado. Las preguntas relacionadas con este tipo de cuestiones pueden ser mejor respondidas de la mano de una consideración cuidadosa de los principios éticos fundamentales, considerando al bien público como la mayor prioridad. La profesión informática en su totalidad sale beneficiada cuando el proceso ético de toma de decisiones es responsable y transparente para todas las partes interesadas. Discusiones abiertas sobre cuestiones éticas promueve la responsabilidad y la transparencia.
 
@@ -168,28 +165,16 @@ Incluso los sistemas informáticos más simples tienen el potencial de afectar t
 
 El futuro de la Informática depende de la excelencia técnica y ética. Los profesionales de la informática deben adherir a los principios del Código y contribuir a mejorarlos. Los profesionales de la Informática que reconocen incumplimientos del Código deben tomar medidas para resolver los problemas éticos identificados, incluso, cuando sea razonable, expresando su preocupación a la persona o personas que se cree que violan el Código.
 
-## 4.2 Tratar las violaciones del Código como inconsistentes con la afiliación a **${utils.utils.organizacion}**.
+## 4.2 Tratar las violaciones del Código como inconsistentes con la afiliación a **${organizacion}**.
 
-Cada miembro de **${
-	utils.utils.organizacion
-}** debe alentar y apoyar la adhesión de todos los profesionales de la Informática independientemente de su afiliación a **${
-	utils.utils.organizacion
-}**. Los miembros de **${
-	utils.utils.organizacion
-}** que reconocen una violación del Código deben evaluar reportarla a **${
-	utils.utils.organizacion
-}**, con la posibilidad de resultar en acciones correctivas, tal como se especifica en el Código de Ética de **${
-	utils.utils.organizacion
-}** y en la Política de Aplicación de la Conducta Profesional.
+Cada miembro de **${organizacion}** debe alentar y apoyar la adhesión de todos los profesionales de la Informática independientemente de su afiliación a **${organizacion}**. Los miembros de **${organizacion}** que reconocen una violación del Código deben evaluar reportarla a **${organizacion}**, con la posibilidad de resultar en acciones correctivas, tal como se especifica en el Código de Ética de **${organizacion}** y en la Política de Aplicación de la Conducta Profesional.
 
 ## Aplicación
-Las violaciones del Código de ética y conducta pueden informarse enviando un correo electrónico a **${
-	utils.utils.email
-}**. Todos los informes serán revisados ​​e investigados y resultarán en una respuesta que se considere necesaria y apropiada a las circunstancias. Más detalles de políticas específicas de cumplimiento pueden ser publicados por separado.
+Las violaciones del Código de ética y conducta pueden informarse enviando un correo electrónico a **${email}**. Todos los informes serán revisados ​​e investigados y resultarán en una respuesta que se considere necesaria y apropiada a las circunstancias. Más detalles de políticas específicas de cumplimiento pueden ser publicados por separado.
 
 Nos reservamos el derecho y la responsabilidad de eliminar comentarios u otras contribuciones que no estén alineadas con este Código de conducta, o de prohibir temporal o permanentemente a cualquier miembro por otras conductas que consideren inapropiadas, amenazantes, ofensivas o dañinas.
 
 
 `;
 
-exports.coco_largo = coco_largo;
+export default coco_largo;

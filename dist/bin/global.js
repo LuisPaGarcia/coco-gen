@@ -1,0 +1,6 @@
+#!/usr/bin/env node
+"use strict";var _utils=require("../lib/utils"),_index=_interopRequireDefault(require("../lib/index"));function _interopRequireDefault(a){return a&&a.__esModule?a:{default:a}}function global(){// Elimina argumentos innecesarios
+var a=process.argv.splice(process.execArgv.length+2),b=a[0],c=a[1],d=a[2];// Recibe los parámetros para  escribirlos en el COCO.
+// Error handling
+if("corto"!==b&&"largo"!==b)return void console.log("\nERROR: Debes indicar si quieres el c\xF3digo de conducta largo o corto. (coco-gen corto ejemplo hola@hola.com)\n");if(!c)return void console.log("\nERROR: Debes indicar el nombre de tu organizacion. (coco-gen corto \"Nombre de mi organizacion\" hola@hola.com)\n");require("../lib/utils");return!1===(0,_utils.validateEmail)(d)?void console.log("\nERROR: Debes indicar un email v\xE1lido de ayuda y contacto. (coco-gen corto \"Nombre de mi organizacion\" hola@hola.com)\n"):void// Displays the text in the console
+(0,_index["default"])("corto"===b,c,d)}global();

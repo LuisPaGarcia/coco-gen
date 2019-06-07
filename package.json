@@ -2,12 +2,13 @@
   "name": "coco-gen",
   "version": "0.1.1",
   "description": "Generador de códigos de conducta",
-  "main": "./lib/index.js",
+  "main": "./dist/lib/index.js",
   "bin": {
-    "coco-gen": "./bin/global.js"
+    "coco-gen": "./dist/bin/global.js"
   },
   "directories": {
-    "lib": "lib"
+    "dist": "dist",
+    "src": "src"
   },
   "keywords": [],
   "author": "https://github.com/luispagarcia/",
@@ -20,7 +21,15 @@
   },
   "license": "MIT",
   "scripts": {
-    "test": "echo \"Error: no test specified\""
+    "test": "echo \"Error: no test specified\"",
+    "build": "babel src --out-dir dist"
   },
-  "preferGlobal": true
+  "preferGlobal": true,
+  "devDependencies": {
+    "@babel/cli": "^7.4.4",
+    "@babel/core": "^7.4.5",
+    "@babel/node": "^7.4.5",
+    "@babel/preset-env": "^7.4.5",
+    "babel-preset-minify": "^0.5.0"
+  }
 }

@@ -1,8 +1,8 @@
 //@ts-check
-const utils = require("./utils")
+import { organizacion, email } from './utils';
 const coco_corto = `
 # Código de Conducta y Ética
-Se espera que todos los participantes de **${utils.utils.organizacion}** cumplan con nuestro Código de conducta, tanto en línea como durante los eventos en persona que se hospedan y / o están asociados con **${utils.utils.organizacion}**.
+Se espera que todos los participantes de **${organizacion}** cumplan con nuestro Código de conducta, tanto en línea como durante los eventos en persona que se hospedan y / o están asociados con **${organizacion}**.
 
 # El código
 Con el fin de fomentar un ambiente abierto y acogedor, nos comprometemos a hacer que la participación en nuestro proyecto y nuestra comunidad sea una experiencia sin hostigamiento para todos, independientemente de la edad, el tamaño del cuerpo, la discapacidad, el origen étnico, la identidad y expresión de género, el nivel de experiencia, nacionalidad, apariencia personal, raza, religión o identidad y orientación sexual.
@@ -30,7 +30,7 @@ Ejemplos de comportamiento inaceptable por parte de los participantes incluyen:
 - Otra conducta que usted conozca podría ser considerada inapropiada en un entorno profesional.
 
 # Aplicación
-Las violaciones del Código de conducta pueden informarse enviando un correo electrónico a **${utils.utils.email}**. Todos los informes serán revisados ​​e investigados y resultarán en una respuesta que se considere necesaria y apropiada a las circunstancias. Más detalles de políticas específicas de cumplimiento pueden ser publicados por separado.
+Las violaciones del Código de conducta pueden informarse enviando un correo electrónico a **${email}**. Todos los informes serán revisados ​​e investigados y resultarán en una respuesta que se considere necesaria y apropiada a las circunstancias. Más detalles de políticas específicas de cumplimiento pueden ser publicados por separado.
 
 Nos reservamos el derecho y la responsabilidad de eliminar comentarios u otras contribuciones que no estén alineadas con este Código de conducta, o de prohibir temporal o permanentemente a cualquier miembro por otras conductas que consideren inapropiadas, amenazantes, ofensivas o dañinas.
 
@@ -39,4 +39,4 @@ Este Código de Conducta está adaptado del código de conducta de dev.to.
 
 `;
 
-exports.coco_corto = coco_corto
+export default coco_corto;
