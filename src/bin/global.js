@@ -5,18 +5,18 @@ import escribir_coco from '../lib/index';
 const schema = {
 	properties: {
 		organizacion: {
-			description: 'Nombre de tu organización:',
+			description: 'Nombre de tu organización',
 			type: 'string',
 			required: true
 		},
 		email: {
-			description: 'Email de soporte de tu organización:',
+			description: 'Email de soporte de tu organización',
 			type: 'string',
 			required: true,
 			pattern: /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
 		},
 		corto: {
-			description: 'Código de Ética y Conducta corto o largo? (corto | largo):',
+			description: 'Código de Ética y Conducta corto o largo? (corto | largo)',
 			type: 'string',
 			required: true,
 			pattern: /^(corto|largo)$/
