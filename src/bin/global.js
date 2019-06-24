@@ -1,40 +1,33 @@
 #!/usr/bin/env node
-import { validateEmail } from '../lib/utils';
+import prompt from 'prompt';
 import escribir_coco from '../lib/index';
-function global() {
-  // Elimina argumentos innecesarios
-  var args = process.argv.splice(process.execArgv.length + 2);
 
-  // Recibe los parámetros para  escribirlos en el COCO.
-  var corto = args[0];
-  var organizacion = args[1];
-  var email = args[2];
+const schema = {
+	properties: {
+		organizacion: {
+			description: 'Nombre de tu organización:',
+			type: 'string',
+			required: true
+		},
+		email: {
+			description: 'Email de soporte de tu organización:',
+			type: 'string',
+			required: true,
+			pattern: /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+		},
+		corto: {
+			description: 'Código de Ética y Conducta corto o largo? (corto | largo):',
+			type: 'string',
+			required: true,
+			pattern: /^(corto|largo)$/
+		}
+	}
+};
 
-  // Error handling
-  if (corto !== 'corto' && corto !== 'largo') {
-    console.log(
-      '\nERROR: Debes indicar si quieres el código de conducta largo o corto. (coco-gen corto ejemplo hola@hola.com)\n'
-    );
-    return;
-  }
+prompt.start();
+console.log('\nIngresa los siguientes datos para generar tu código de ética y conducta.\n');
+prompt.get(schema, function(err, { organizacion, email, corto }) {
+	if (err) throw Error('Fatal error.');
 
-  if (!organizacion) {
-    console.log(
-      '\nERROR: Debes indicar el nombre de tu organizacion. (coco-gen corto "Nombre de mi organizacion" hola@hola.com)\n'
-    );
-    return;
-  }
-
-  var utils = require('../lib/utils');
-  if (validateEmail(email) === false) {
-    console.log(
-      '\nERROR: Debes indicar un email válido de ayuda y contacto. (coco-gen corto "Nombre de mi organizacion" hola@hola.com)\n'
-    );
-    return;
-  }
-
-  // Displays the text in the console
-  escribir_coco(corto === 'corto', organizacion, email);
-}
-
-global();
+	escribir_coco(corto === 'corto', organizacion, email);
+});
